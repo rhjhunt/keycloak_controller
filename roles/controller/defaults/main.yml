@@ -1,0 +1,15 @@
+---
+# Ansible Automation Controller Host
+controller_host: '{{ lookup("env", "CONTROLLER_HOST") | default(omit) }}'
+
+# Ansible Automation Controller Username
+controller_username: '{{ lookup("env", "CONTROLLER_USERNAME") | default(omit) }}'
+
+# Ansible Automation Controller User OAuth Token
+controller_oauthtoken: '{{ lookup("env", "CONTROLLER_OAUTH_TOKEN") | default(omit) }}'
+
+# Ansible Automation Controller User Password
+controller_password: '{{ lookup("env", "CONTROLLER_PASSWORD") | default(omit) }}'
+
+# Verify SSL certs when communicating with Ansible Automation Controller
+controller_verify_ssl: '{{ lookup("env", "CONTROLLER_VERIFY_SSL") | default(omit) }}'

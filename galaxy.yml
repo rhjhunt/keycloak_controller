@@ -1,0 +1,32 @@
+namespace: rhjhunt
+name: keycloak_controller
+version: 1.0.0
+readme: README.md
+authors:
+- Jacob Hunt (https://github.com/rhjhunt)
+description: Collection to configure keycloak (Red Hat Single Sign On) and Ansible Automation Controller with saml authentication
+license:
+- GPL-3.0-or-later
+license_file: ''
+tags:
+  - rhsso
+  - saml
+  - controller
+  - keycloak
+  - aap
+dependencies:
+  community.general: '>=4.8.0'
+  awx.awx: '>=19.4.0'
+repository: https://github.com/rhjhunt/keycloak_controller
+documentation: ''
+homepage: https://github.com/rhjhunt/keycloak_controller
+issues: https://github.com/rhjhunt/keycloak_controller/issues
+build_ignore:
+  - .vale.ini
+  - .yamllint
+  - .markdownlint.json
+  - .github
+  - .gitignore
+  - '*.tar.gz'
+  - venv/
+  - molecule/

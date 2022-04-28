@@ -1,2 +1,3 @@
-# keylock_controller
-Ansible collection to setup RHSSO and Ansible Automation Controller
+# Ansible Collection - rhjhunt.keycloak_controller
+
+Documentation for the collection.
