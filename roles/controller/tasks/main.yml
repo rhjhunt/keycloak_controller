@@ -1,2 +1,19 @@
 ---
-# tasks file for controller
+- name: Configure the saml authentication service on Ansible Automation Controller
+  awx.awx.settings:
+    settings:
+      SAML_AUTO_CREATE_OBJECTS: "{{ controller_saml_auto_create }}"
+      SOCIAL_AUTH_SAML_SP_ENTITY_ID: "{{ controller_saml_entity_id }}"
+      SOCIAL_AUTH_SAML_SP_PUBLIC_CERT: "{{ controller_saml_public_cert }}"
+      SOCIAL_AUTH_SAML_SP_PRIVATE_KEY: "{{ controller_saml_private_key }}"
+      SOCIAL_AUTH_SAML_ORG_INFO: "{{ controller_saml_org_info }}"
+      SOCIAL_AUTH_SAML_TECHNICAL_CONTACT: "{{ controller_saml_tech_contact }}"
+      SOCIAL_AUTH_SAML_SUPPORT_CONTACT: "{{ controller_saml_support_contact }}"
+      SOCIAL_AUTH_SAML_ENABLED_IDPS: "{{ controller_saml_enabled_idps }}"
+      SOCIAL_AUTH_SAML_SECURITY_CONFIG: "{{ controller_saml_security_config }}"
+      SOCIAL_AUTH_SAML_SP_EXTRA: "{{ controller_saml_sp_extra }}"
+      SOCIAL_AUTH_SAML_EXTRA_DATA: "{{ controller_saml_extra_data }}"
+      SOCIAL_AUTH_SAML_ORGANIZATION_MAP: "{{ controller_saml_org_map }}"
+      SOCIAL_AUTH_SAML_TEAM_MAP: "{{ controller_saml_team_map }}"
+      SOCIAL_AUTH_SAML_ORGANIZATION_ATTR: "{{ controller_saml_org_attr }}"
+      SOCIAL_AUTH_SAML_TEAM_ATTR: "{{ controller_saml_team_attr }}"

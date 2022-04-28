@@ -13,3 +13,49 @@ controller_password: '{{ lookup("env", "CONTROLLER_PASSWORD") | default(omit) }}
 
 # Verify SSL certs when communicating with Ansible Automation Controller
 controller_verify_ssl: '{{ lookup("env", "CONTROLLER_VERIFY_SSL") | default(omit) }}'
+
+# Automatically Create Organizations and Teams on SAML Login
+controller_saml_auto_create: true
+
+# SAML Service Provider Entity ID
+controller_saml_entity_id: '{{ omit }}'
+
+# SAML Service Provider Public Certificate
+controller_saml_public_cert: '{{ omit }}'
+
+# SAML Service Provider Private Key
+controller_saml_private_key: '{{ omit }}'
+
+# SAML Service Provider Organization Info
+controller_saml_org_info: '{{ default{omit} }}'
+
+# SAML Service Provider Technical Contact
+controller_saml_tech_contact: '{{ default{omit} }}'
+
+# SAML Service Provider Support Contact
+controller_saml_support_contact: '{{ default{omit} }}'
+
+# SAML Enabled Identity Providers
+controller_saml_enabled_idps: '{{ default{omit} }}'
+
+# SAML Security Config
+controller_saml_security_config:
+  - { "requestedAuthnContext": false }
+
+# SAML Service Provider extra configuration data
+controller_saml_sp_extra: null
+
+# SAML IDP to extra_data attribute mapping
+controller_saml_extra_data: null
+
+# SAML Organization Map
+controller_saml_org_map: null
+
+# SAML Team Map
+controller_saml_team_map: null
+
+# SAML Organization Attribute Mapping
+controller_saml_org_attr: '{{ default{omit} }}'
+
+# SAML Team Attribute Mapping
+controller_saml_team_attr: '{{ default{omit} }}'

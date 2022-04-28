@@ -1,14 +1,14 @@
 ---
-name: markdownlint
+name: ansible-lint
 on: [push, pull_request]
 
 jobs:
 
-  markdownlint:
+  ansible-lint:
     runs-on: ubuntu-latest
     steps:
 
-      - name: 'Checkout'
+      - name: Checkout
         uses: actions/checkout@v2
 
       - name: Login to Docker Hub
@@ -17,8 +17,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-      - name: 'Markdownlint markdown files'
-        uses: nosborn/github-action-markdown-cli@v3.0.1
+      - name: Run ansible-lint
+        uses: ansible-community/ansible-lint-action@main
         with:
-          files: .
-          config_file: .markdownlint.json
+          path: "roles/"

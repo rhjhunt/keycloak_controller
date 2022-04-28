@@ -1,6 +1,6 @@
 ---
 name: Vale
-on: [push]
+on: [push, pull_request]
 
 jobs:
 
@@ -22,7 +22,7 @@ jobs:
         uses: trilom/file-changes-action@v1.2.4
 
       - name: 'run vale'
-        uses: errata-ai/vale-action@v1.4.2
+        uses: errata-ai/vale-action@v1.5.0
         with:
           files: '${{ steps.file_changes.outputs.files_modified }}'
         env:
